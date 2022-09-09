@@ -48,27 +48,25 @@ user_set
 %
 % Biomet toolbox path (mirror copy of the server's toolbox is stored there)
 %
-if ispc
-    % this works on PC-s only
-    path('c:\Biomet.net\matlab\TraceAnalysis_FCRN_THIRDSTAGE',path);
-    path('c:\Biomet.net\matlab\TraceAnalysis_Tools',path);
-    path('c:\Biomet.net\matlab\TraceAnalysis_SecondStage',path);
-    path('c:\Biomet.net\matlab\TraceAnalysis_FirstStage',path);
-    path('c:\Biomet.net\matlab\soilchambers',path);
-    path('c:\Biomet.net\matlab\biomet',path);  
-    path('c:\Biomet.net\matlab\boreas',path);
-    path('c:\Biomet.net\matlab\biomet',path);      
-    path('c:\Biomet.net\matlab\new_met',path);      
-    path('c:\Biomet.net\matlab\met',path);    
-    path('c:\Biomet.net\matlab\new_eddy',path); 
-    path('c:\Biomet.net\MATLAB\SystemComparison',path);         % use this line on the workstations
-    if server == 1
-        path('c:\Biomet.net\matlab\Micromet',path);
-    end
 
-    path('c:\ubc_PC_setup\site_specific',path);      
-    path('c:\ubc_PC_setup\PC_specific',path);
+path('c:\Biomet.net\matlab\TraceAnalysis_FCRN_THIRDSTAGE',path);
+path('c:\Biomet.net\matlab\TraceAnalysis_Tools',path);
+path('c:\Biomet.net\matlab\TraceAnalysis_SecondStage',path);
+path('c:\Biomet.net\matlab\TraceAnalysis_FirstStage',path);
+path('c:\Biomet.net\matlab\soilchambers',path);
+path('c:\Biomet.net\matlab\biomet',path);  
+path('c:\Biomet.net\matlab\boreas',path);
+path('c:\Biomet.net\matlab\biomet',path);      
+path('c:\Biomet.net\matlab\new_met',path);      
+path('c:\Biomet.net\matlab\met',path);    
+path('c:\Biomet.net\matlab\new_eddy',path); 
+path('c:\Biomet.net\MATLAB\SystemComparison',path);         % use this line on the workstations
+if server == 1
+    path('c:\Biomet.net\matlab\Micromet',path);
 end
+    
+path('c:\ubc_PC_setup\site_specific',path);      
+path('c:\ubc_PC_setup\PC_specific',path);
 
 while exist('startnet') ~= 2
 end
