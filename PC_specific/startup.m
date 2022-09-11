@@ -5,12 +5,18 @@
 %===================================================================
 
 %
-% (c) Zoran Nesic           File created:               1995
-%                           Last modification:   Feb 3, 2017
+% (c) Zoran Nesic           File created:                1995
+%                           Last modification:   Sep  9, 2022
 
 %
 % Revisions:
 %
+%   Sep 9, 2022 (Zoran)
+%       - Start making changes so this function can work with MacOS as well
+%         as with Windows. When we decide to go with Git and stop backing up
+%         and/or copying Biomet.net manually, we can get rid of \\paoa001 option
+%         because every user will be able to maintain an up-to-date Biomet.net
+%         on their PC/Mac.
 %   Feb 3, 2017 (Zoran)
 %       - Added path to UTILS folder for the server (PAOA001) only
 %         (this might be needed on other machines too)
@@ -47,78 +53,50 @@ user_set
 
 %
 % Biomet toolbox path (mirror copy of the server's toolbox is stored there)
-%
+% (This can be removed once every PC starts maintaining its own Biomet.net
+%  via GitHub)
 if ispc
     % this works on PC-s only
     path('c:\Biomet.net\matlab\TraceAnalysis_FCRN_THIRDSTAGE',path);
     path('c:\Biomet.net\matlab\TraceAnalysis_Tools',path);
     path('c:\Biomet.net\matlab\TraceAnalysis_SecondStage',path);
     path('c:\Biomet.net\matlab\TraceAnalysis_FirstStage',path);
-    path('c:\Biomet.net\matlab\soilchambers',path);
-    path('c:\Biomet.net\matlab\biomet',path);  
-    path('c:\Biomet.net\matlab\boreas',path);
-    path('c:\Biomet.net\matlab\biomet',path);      
+    path('c:\Biomet.net\matlab\soilchambers',path); 
+    path('c:\Biomet.net\matlab\BOREAS',path);
+    path('c:\Biomet.net\matlab\BIOMET',path);      
     path('c:\Biomet.net\matlab\new_met',path);      
     path('c:\Biomet.net\matlab\met',path);    
     path('c:\Biomet.net\matlab\new_eddy',path); 
-    path('c:\Biomet.net\MATLAB\SystemComparison',path);         % use this line on the workstations
-    if server == 1
-        path('c:\Biomet.net\matlab\Micromet',path);
-    end
-
+    path('c:\Biomet.net\matlab\SystemComparison',path);         % use this line on the workstations
+    path('c:\Biomet.net\matlab\Micromet',path);
+    % These two files always 
     path('c:\ubc_PC_setup\site_specific',path);      
     path('c:\ubc_PC_setup\PC_specific',path);
-end
-
-while exist('startnet') ~= 2
-end
-
-
-
-%
-% For the network users, the network path should be first (if the server 
-% is connected).
-%
-
-if server ~= 1 
-    if exist('\\PAOA001\MATLAB\BIOMET\startnet.m')
-        path('\\PAOA001\matlab\TraceAnalysis_FCRN_THIRDSTAGE',path);
-        path('\\PAOA001\matlab\TraceAnalysis_Tools',path);
-        path('\\PAOA001\matlab\TraceAnalysis_SecondStage',path);
-        path('\\PAOA001\matlab\TraceAnalysis_FirstStage',path);
-        path('\\PAOA001\matlab\soilchambers',path);                   % use this line on the workstations        
-        path('\\PAOA001\matlab\BIOMET',path);                   % use this line on the workstations
-        path('\\PAOA001\MATLAB\BOREAS',path);                   % use this line on the workstations
-        path('\\PAOA001\MATLAB\new_met',path);                  % use this line on the workstations       
-        path('\\PAOA001\MATLAB\met',path);                      % use this line on the workstations       
-        path('\\PAOA001\MATLAB\new_eddy',path);                 % use this line on the workstations               
-        path('\\PAOA001\MATLAB\SystemComparison',path);         % use this line on the workstations
-        path('\\PAOA001\matlab\Micromet',path);
-        while exist('startnet') ~= 2
-        end
-        disp(sprintf('\nBiomet network toolbox connected!\n'));
-    else
-        disp(sprintf('\nBiomet network toolbox is off!\n'));
-    end
+elseif ismac
+    % this works on Mac-s only
+    path('/Users/your_name/Code/Biomet.net/matlabTraceAnalysis_FCRN_THIRDSTAGE',path);
+    path('/Users/your_name/Code/Biomet.net/matlabTraceAnalysis_Tools',path);
+    path('/Users/your_name/Code/Biomet.net/matlabTraceAnalysis_SecondStage',path);
+    path('/Users/your_name/Code/Biomet.net/matlabTraceAnalysis_FirstStage',path);
+    path('/Users/your_name/Code/Biomet.net/matlabsoilchambers',path); 
+    path('/Users/your_name/Code/Biomet.net/matlabBOREAS',path);
+    path('/Users/your_name/Code/Biomet.net/matlabBIOMET',path);      
+    path('/Users/your_name/Code/Biomet.net/matlabnew_met',path);      
+    path('/Users/your_name/Code/Biomet.net/matlabmet',path);    
+    path('/Users/your_name/Code/Biomet.net/matlabnew_eddy',path); 
+    path('/Users/your_name/Code/Biomet.net/matlabSystemComparison',path);         % use this line on the workstations
+    path('/Users/your_name/Code/Biomet.net/matlabMicromet',path);
+    % These two files always 
+    path('/Users/your_name/Code/ubc_PC_setup/site_specific',path);      
+    path('/Users/your_name/Code/ubc_PC_setup/PC_specific',path);   
 end
 
 path(user_dir,path);
 
-
-startnet;
-
-% If at the site check if the daily matlab run is in order
-
-if exist('run_matlab_1') ~= 0
-    run_matlab_1
-end
-
 % If the user wants to customize his Matlab environment he may create
 % the localrc.m file in Matlab's main directory
-
-if exist('localrc') ~= 0
+if exist('localrc','file') ~= 0
     localrc
 end
 
-system_dependent(14,'on')
 clear server user_dir
