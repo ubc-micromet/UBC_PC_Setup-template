@@ -6,11 +6,13 @@
 
 %
 % (c) Zoran Nesic           File created:                1995
-%                           Last modification:   Sep 11, 2022
+%                           Last modification:   Sep 12, 2022
 
 %
 % Revisions:
 %
+%   Sep 12, 2022 (Zoran)
+%       - Decided that the proper spelling is UBC_PC_Setup (capital "S")
 %   Sep 11, 2022 (Zoran)
 %       - added edits for MacOS. 
 %       - removed obsolete commands
@@ -73,8 +75,8 @@ if ispc
     path('c:\Biomet.net\matlab\SystemComparison',path);         % use this line on the workstations
     path('c:\Biomet.net\matlab\Micromet',path);
     % These two files always 
-    path('c:\UBC_PC_setup\Site_specific',path);      
-    path('c:\UBC_PC_setup\PC_specific',path);
+    path('c:\UBC_PC_Setup\Site_specific',path);      
+    path('c:\UBC_PC_Setup\PC_specific',path);
 elseif ismac
     % this works on Mac-s only
     path('/Users/your_name/Code/Biomet.net/matlab/TraceAnalysis_FCRN_THIRDSTAGE',path);
@@ -90,8 +92,8 @@ elseif ismac
     path('/Users/your_name/Code/Biomet.net/matlab/SystemComparison',path);         % use this line on the workstations
     path('/Users/your_name/Code/Biomet.net/matlab/Micromet',path);
     % These two files always 
-    path('/Users/your_name/Code/UBC_PC_setup/Site_specific',path);      
-    path('/Users/your_name/Code/UBC_PC_setup/PC_specific',path);   
+    path('/Users/your_name/Code/UBC_PC_Setup/Site_specific',path);      
+    path('/Users/your_name/Code/UBC_PC_Setup/PC_specific',path);   
 end
 
 path(user_dir,path);
