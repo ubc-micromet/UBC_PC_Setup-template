@@ -6,11 +6,14 @@
 
 %
 % (c) Zoran Nesic           File created:                1995
-%                           Last modification:   Sep  9, 2022
+%                           Last modification:   Sep 11, 2022
 
 %
 % Revisions:
 %
+%   Sep 11, 2022 (Zoran)
+%       - added edits for MacOS. 
+%       - removed obsolete commands
 %   Sep 9, 2022 (Zoran)
 %       - Start making changes so this function can work with MacOS as well
 %         as with Windows. When we decide to go with Git and stop backing up
@@ -70,25 +73,25 @@ if ispc
     path('c:\Biomet.net\matlab\SystemComparison',path);         % use this line on the workstations
     path('c:\Biomet.net\matlab\Micromet',path);
     % These two files always 
-    path('c:\ubc_PC_setup\site_specific',path);      
-    path('c:\ubc_PC_setup\PC_specific',path);
+    path('c:\UBC_PC_setup\Site_specific',path);      
+    path('c:\UBC_PC_setup\PC_specific',path);
 elseif ismac
     % this works on Mac-s only
-    path('/Users/your_name/Code/Biomet.net/matlabTraceAnalysis_FCRN_THIRDSTAGE',path);
-    path('/Users/your_name/Code/Biomet.net/matlabTraceAnalysis_Tools',path);
-    path('/Users/your_name/Code/Biomet.net/matlabTraceAnalysis_SecondStage',path);
-    path('/Users/your_name/Code/Biomet.net/matlabTraceAnalysis_FirstStage',path);
-    path('/Users/your_name/Code/Biomet.net/matlabsoilchambers',path); 
-    path('/Users/your_name/Code/Biomet.net/matlabBOREAS',path);
-    path('/Users/your_name/Code/Biomet.net/matlabBIOMET',path);      
-    path('/Users/your_name/Code/Biomet.net/matlabnew_met',path);      
-    path('/Users/your_name/Code/Biomet.net/matlabmet',path);    
-    path('/Users/your_name/Code/Biomet.net/matlabnew_eddy',path); 
-    path('/Users/your_name/Code/Biomet.net/matlabSystemComparison',path);         % use this line on the workstations
-    path('/Users/your_name/Code/Biomet.net/matlabMicromet',path);
+    path('/Users/your_name/Code/Biomet.net/matlab/TraceAnalysis_FCRN_THIRDSTAGE',path);
+    path('/Users/your_name/Code/Biomet.net/matlab/TraceAnalysis_Tools',path);
+    path('/Users/your_name/Code/Biomet.net/matlab/TraceAnalysis_SecondStage',path);
+    path('/Users/your_name/Code/Biomet.net/matlab/TraceAnalysis_FirstStage',path);
+    path('/Users/your_name/Code/Biomet.net/matlab/soilchambers',path); 
+    path('/Users/your_name/Code/Biomet.net/matlab/BOREAS',path);
+    path('/Users/your_name/Code/Biomet.net/matlab/BIOMET',path);      
+    path('/Users/your_name/Code/Biomet.net/matlab/new_met',path);      
+    path('/Users/your_name/Code/Biomet.net/matlab/met',path);    
+    path('/Users/your_name/Code/Biomet.net/matlab/new_eddy',path); 
+    path('/Users/your_name/Code/Biomet.net/matlab/SystemComparison',path);         % use this line on the workstations
+    path('/Users/your_name/Code/Biomet.net/matlab/Micromet',path);
     % These two files always 
-    path('/Users/your_name/Code/ubc_PC_setup/site_specific',path);      
-    path('/Users/your_name/Code/ubc_PC_setup/PC_specific',path);   
+    path('/Users/your_name/Code/UBC_PC_setup/Site_specific',path);      
+    path('/Users/your_name/Code/UBC_PC_setup/PC_specific',path);   
 end
 
 path(user_dir,path);
