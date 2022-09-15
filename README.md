@@ -42,16 +42,16 @@ Leave the rest as is then save the file.
 * Run Matlab<br />
 * Click on the `Home` tab<br />
 * Select `Set Path`<br />
-* `Add Folder` > PC_specific and Biomet.net (note that depending on your version of Matlab, Matlab may do this automatically). Make sure that all subfolders are also included:
-
-This should look something like this (everything should look similar starting from the from `UBC_PC_Setup` and `Biomet.net`):
-<img src="/images/MatlabSetUpMac.png" alt="Alt text" title="Optional title">
+* `Add Folder` > PC_specific<br /> 
+<img src="/images/MatlabSetUp.png" alt="Alt text" title="Optional title">
 
 At this point Matlab may throw a fit and start complaining that the file cannot be saved into the default folder. <br />
 You may need to save it somewhere else (e.g., `c:\UBC_PC_Setup\UBC_PC_specific` or `~/Users/youruser/UBC_PC_Setup/UBC_PC_specific`) but that may or may not work.<br /> 
 **Talk to Zoran if you get stuck here**. 
 
 3) Restart Matlab <br />
+
+Note that Matlab will automatically (through startup.m) add the Biomet.net paths just for that session. It's not set it permanently on the path because we occasionally want to be able to restore Matlab path to Biomet.net free state by typing >> `path(pathdef)`.
 
 If you are connected to **UBC.geog VPN** & **are connected to vinimet**, type "view_micromet" in Matlab and see if it works.
 
