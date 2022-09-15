@@ -79,21 +79,21 @@ if ispc
     path('c:\UBC_PC_Setup\PC_specific',path);
 elseif ismac
     % this works on Mac-s only
-    path('/Users/your_name/Code/Biomet.net/matlab/TraceAnalysis_FCRN_THIRDSTAGE',path);
-    path('/Users/your_name/Code/Biomet.net/matlab/TraceAnalysis_Tools',path);
-    path('/Users/your_name/Code/Biomet.net/matlab/TraceAnalysis_SecondStage',path);
-    path('/Users/your_name/Code/Biomet.net/matlab/TraceAnalysis_FirstStage',path);
-    path('/Users/your_name/Code/Biomet.net/matlab/soilchambers',path); 
-    path('/Users/your_name/Code/Biomet.net/matlab/BOREAS',path);
-    path('/Users/your_name/Code/Biomet.net/matlab/BIOMET',path);      
-    path('/Users/your_name/Code/Biomet.net/matlab/new_met',path);      
-    path('/Users/your_name/Code/Biomet.net/matlab/met',path);    
-    path('/Users/your_name/Code/Biomet.net/matlab/new_eddy',path); 
-    path('/Users/your_name/Code/Biomet.net/matlab/SystemComparison',path);         % use this line on the workstations
-    path('/Users/your_name/Code/Biomet.net/matlab/Micromet',path);
+    path('/Users/your_name/Biomet.net/matlab/TraceAnalysis_FCRN_THIRDSTAGE',path);
+    path('/Users/your_name/Biomet.net/matlab/TraceAnalysis_Tools',path);
+    path('/Users/your_name/Biomet.net/matlab/TraceAnalysis_SecondStage',path);
+    path('/Users/your_name/Biomet.net/matlab/TraceAnalysis_FirstStage',path);
+    path('/Users/your_name/Biomet.net/matlab/soilchambers',path); 
+    path('/Users/your_name/Biomet.net/matlab/BOREAS',path);
+    path('/Users/your_name/Biomet.net/matlab/BIOMET',path);      
+    path('/Users/your_name/Biomet.net/matlab/new_met',path);      
+    path('/Users/your_name/Biomet.net/matlab/met',path);    
+    path('/Users/your_name//Biomet.net/matlab/new_eddy',path); 
+    path('/Users/your_name/Biomet.net/matlab/SystemComparison',path);         % use this line on the workstations
+    path('/Users/your_name/Biomet.net/matlab/Micromet',path);
     % These two files always 
-    path('/Users/your_name/Code/UBC_PC_Setup/Site_specific',path);      
-    path('/Users/your_name/Code/UBC_PC_Setup/PC_specific',path);   
+    path('/Users/your_name/UBC_PC_Setup/Site_specific',path);      
+    path('/Users/your_name/UBC_PC_Setup/PC_specific',path);   
 end
 
 path(user_dir,path);

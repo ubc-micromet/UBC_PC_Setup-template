@@ -11,7 +11,7 @@ if ispc
 elseif ismac
     % if you are on a Mac and have mounted remote 
     % drive vinimet.geog.ubc.ca/Database
-    x = '/Volumes/Database/';
+    x = '/Volumes/Projects/Database/';
     % if you are working on your local copy of database 
     % and you have it in your Library folder:
     %x = '/Users/your_name/Library/Database/';
