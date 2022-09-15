@@ -61,7 +61,7 @@ To connect to vinimet on MacOS:
 
 Congratulations, you got Matlab working! Or you might need to talk to Zoran again ;-)
 
-**NOTE** <br />
+**NOTE** (ignore this for now) <br />
 There could still be an error about `diarylog` not working or some missing paths.<br />
 Type `edit diarylog` in Matlab<br />
 This program automatically creates log files of your Matlab sessions. I find it useful for keeping track of what I was doing on a particular day but most of other users don't need it.<br />
