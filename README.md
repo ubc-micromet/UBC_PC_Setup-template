@@ -13,6 +13,7 @@ Template for Micromet-specific Matlab installation
 |  `c:\UBC_PC_Setup\Site_specific`   | `~/Users/youruser/UBC_PC_Setup/Site_specific`              |
 
 * Next in `PC_specific`:
+
 1) Edit `user_set.m`:
 Change only the first line so the `user_dir` variable points to your default Matlab folder (the folder you want to put your personal Matlab files by default):
 I suggest something like: 
