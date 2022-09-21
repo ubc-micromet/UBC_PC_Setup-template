@@ -61,6 +61,6 @@ To connect to vinimet on MacOS:
 
 Congratulations, you got Matlab working! Or you might need to talk to Zoran again ;-)
 
-
+4) If you got Matlab working, go back to the `Biomet.net` README.md and follow the instructions of step #3 (Creating a local copy of the database on your computer)
 
 
